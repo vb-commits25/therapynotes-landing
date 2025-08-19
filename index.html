@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TherapyNotes AI — Save 5+ Hours/Week on Session Notes</title>
+  <meta name="description" content="HIPAA-ready AI that transcribes sessions and drafts SOAP notes for therapists. Join the free beta." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="favicon.ico">
+  <meta property="og:title" content="TherapyNotes AI — Save 5+ Hours/Week on Session Notes">
+  <meta property="og:description" content="HIPAA-ready AI that transcribes sessions and drafts SOAP notes. Join the free beta." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">TN</div>
+        <span class="brand-name">TherapyNotes AI</span>
+      </div>
+      <nav>
+        <a href="#how">How it Works</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn--sm" href="#beta">Join Free Beta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <h1>Save <span class="underline">5+ hours/week</span> on session notes</h1>
+          <p class="subtitle">
+            HIPAA-ready AI that turns your session audio into clean, structured <strong>SOAP notes</strong>—in minutes.
+            Built for private-practice therapists and small group practices.
+          </p>
+          <ul class="ticks">
+            <li>Fast transcription &amp; SOAP summaries</li>
+            <li>Secure, encrypted storage</li>
+            <li>Simple, calm interface</li>
+          </ul>
+          <a class="btn btn--lg" href="#beta">Join the Free Beta</a>
+          <p class="tiny-note">No PHI here—beta signup collects email and role only.</p>
+        </div>
+        <div class="hero__card">
+          <div class="card">
+            <h3 class="card__title">Draft SOAP note (example)</h3>
+            <div class="code">
+S (Subjective): Client reports increased anxiety before presentations, difficulty sleeping 3–4 nights/wk.
+O (Objective): Affect congruent; engaged; no acute distress observed; GAD-7 last visit = 12.
+A (Assessment): Progressing; cognitive distortions present; benefits from exposure + skills practice.
+P (Plan): Continue CBT; assign 2 graded exposure tasks; 10-min nightly sleep hygiene routine; f/u next week.
+            </div>
+            <div class="muted">Generated from sample transcript</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST / NOTE -->
+    <section class="ribbon">
+      <div class="container ribbon__inner">
+        <span class="shield">🛡️</span>
+        <span><strong>HIPAA-ready architecture.</strong> No client PHI is collected on this site. BAAs available at subscription time inside the app.</span>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="how">
+      <div class="container">
+        <h2>How it works</h2>
+        <div class="grid3">
+          <div class="card step">
+            <div class="step__num">1</div>
+            <h3>Upload audio</h3>
+            <p>Record your session (with client consent) and upload MP3/WAV to your secure dashboard.</p>
+          </div>
+          <div class="card step">
+            <div class="step__num">2</div>
+            <h3>AI transcribes</h3>
+            <p>High-accuracy transcription handled in the background. You can keep working while it runs.</p>
+          </div>
+          <div class="card step">
+            <div class="step__num">3</div>
+            <h3>SOAP drafted</h3>
+            <p>Clean, structured SOAP notes generated from the transcript. You review and finalize.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER NOTE -->
+    <section class="founder">
+      <div class="container founder__inner">
+        <div>
+          <h2>Why we’re building this</h2>
+          <p>Therapists told us they spend 5–10 hours a week on documentation. We’re here to give that time back—without compromising clinical quality or security.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BETA SIGNUP -->
+    <section id="beta" class="beta">
+      <div class="container beta__inner">
+        <div class="beta__copy">
+          <h2>Join the free beta</h2>
+          <p>Get early access, help shape the product, and lock in a founding-member discount at launch.</p>
+          <ul class="ticks">
+            <li>No credit card</li>
+            <li>Limited beta seats</li>
+            <li>Direct line to the product team</li>
+          </ul>
+        </div>
+
+        <div class="beta__form card">
+          <h3>Request an invite</h3>
+
+          <!-- OPTION A: safest — embed your Google Form/Typeform (no PHI). Replace the src below -->
+          <!--
+          <iframe class="embed" src="YOUR_GOOGLE_OR_TYPEFORM_EMBED_URL" title="Beta signup" loading="lazy"></iframe>
+          -->
+
+          <!-- OPTION B: simple on-page form posting to a safe endpoint (email/role only). 
+               If you deploy on Netlify, add netlify attribute to use Netlify Forms for non-PHI leads. -->
+          <form id="lead-form" method="POST" data-netlify="true" name="beta-signup">
+            <input type="hidden" name="form-name" value="beta-signup" />
+            <label>Email <span class="req">*</span>
+              <input type="email" name="email" required placeholder="you@practice.com" />
+            </label>
+            <label>Your role
+              <select name="role" required>
+                <option value="">Select…</option>
+                <option>Therapist (solo practice)</option>
+                <option>Group practice owner/admin</option>
+                <option>Coach</option>
+                <option>Other mental health professional</option>
+              </select>
+            </label>
+            <label class="consent">
+              <input type="checkbox" id="consent" required />
+              I will not submit any client names or PHI in this form.
+            </label>
+            <button class="btn btn--full" type="submit">Request Invite</button>
+            <p class="tiny-note">We’ll email beta access details. You can unsubscribe anytime.</p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq__item">
+          <h4>Is this HIPAA compliant?</h4>
+          <p>The production app uses HIPAA-eligible cloud services with encryption at rest and in transit, access logs, and BAAs. This public site collects only email/role—no PHI.</p>
+        </div>
+        <div class="faq__item">
+          <h4>What does the beta include?</h4>
+          <p>Secure upload, transcription, SOAP draft, and a simple dashboard. We’ll add features based on your feedback.</p>
+        </div>
+        <div class="faq__item">
+          <h4>Pricing?</h4>
+          <p>Target pricing is $99/mo (solo) and $199/mo (small practice). Founding members receive a permanent discount.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> TherapyNotes AI</div>
+      <div class="footer__links">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <span class="sep">•</span>
+        <span class="muted">BAA available in-app at subscription</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Guard: never allow PHI here (basic reminder)
+    document.getElementById('lead-form')?.addEventListener('submit', function (e) {
+      const consent = document.getElementById('consent');
+      if (!consent.checked) {
+        e.preventDefault();
+        alert('Please confirm you will not submit PHI in this form.');
+      }
+    });
+  </script>
+</body>
+</html>
+
